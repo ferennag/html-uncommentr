@@ -4,6 +4,7 @@ import argparse
 import requests
 import sys
 
+
 def extract(url, iscontext):
     try:
         response = requests.get(url)
@@ -29,6 +30,7 @@ def extract(url, iscontext):
     except requests.exceptions.ConnectionError:
         print(f'Unable to connect to the website at {url}')
         sys.exit(-1)
+
 
 def main():
     parser = argparse.ArgumentParser(description='A little script to extract comments from web pages.')
